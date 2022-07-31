@@ -17,7 +17,10 @@ function NavBar() {
                 <img src="/images/watchlist-icon.svg" alt="" />
                 <span>CONTACT US</span>
             </a>
-            
+            <a>
+                <img src="/images/watchlist-icon.svg" alt="" />
+                <span>ABOUT US</span>
+            </a>
         </NavMenu>
     </NavContainer>
   )
@@ -27,7 +30,7 @@ export default NavBar
 
 const NavContainer = styled.nav`
     height: 70px;
-    background: #090b13;
+    /* background: #090b13; */
     display: flex;
     align-items: center;
     padding: 0 36px;
@@ -49,14 +52,14 @@ const NavMenu = styled.div`
         }
 
         span {
-            font-size: 13px;
+            font-size: 17px;
             letter-spacing: 1.42px;
             position: relative;
 
             &:after {
                 content: "";
                 height: 2px;
-                background: white;
+                background: #62c4ea;
                 position: absolute;
                 left: 0;
                 right: 0;
