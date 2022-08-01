@@ -1,53 +1,69 @@
 import React from 'react'
 import styled from 'styled-components'
-// import { Link } from 'react-router-dom'
 
 
 function Services() {
   return (
     <Container>
-        <h1>Services</h1>
+        <ServiceTitle>
+            <h1>Mobile IV & Injection Services</h1>
+            <h3>Rejuvenation Hydration offers a variety of at-home services, please see below:</h3>
+        </ServiceTitle>
+        <ServiceTitle>
+            <h1>IV Therapy</h1>
+            <h3 style={{color: 'gray'}}>Experience all the benefits of IV Therapy in the comfort of your own home.</h3>
+            <h3 style={{color: '#62c4ea'}}>Select from one of the following options:</h3>
+        </ServiceTitle>
+
         <Content>
+            <a href='/details'>
             <Wrap>
-                <img src="/images/Dehydration-IV-Treatment-.jpg" alt="" />
-                <h3>Fat Burner Injection</h3>
+                <img src="/images/Athletic_IV.png" alt="" />
+                <h3>Athletic IV</h3>
+                <Button>Book Now</Button>
+            </Wrap>
+            </a>
+            <Wrap>
+            <img src="/images/Athletic_IV.png" alt="" />
+                <h3>Athletic IV</h3>
                 <Button>Book Now</Button>
             </Wrap>
             <Wrap>
-                <img src="/images/Dehydration-IV-Treatment-.jpg" alt="" />
-                <h3>Fat Burner Injection</h3>
+            <img src="/images/Athletic_IV.png" alt="" />
+                <h3>Athletic IV</h3>
                 <Button>Book Now</Button>
             </Wrap>
             <Wrap>
-                <img src="/images/Dehydration-IV-Treatment-.jpg" alt="" />
-                <h3>Fat Burner Injection</h3>
+            <img src="/images/Athletic_IV.png" alt="" />
+                <h3>Athletic IV</h3>
                 <Button>Book Now</Button>
             </Wrap>
             <Wrap>
-                <img src="/images/Dehydration-IV-Treatment-.jpg" alt="" />
-                <h3>Fat Burner Injection</h3>
+            <img src="/images/Athletic_IV.png" alt="" />
+                <h3>Athletic IV</h3>
                 <Button>Book Now</Button>
             </Wrap>
             <Wrap>
-                <img src="/images/Dehydration-IV-Treatment-.jpg" alt="" />
-                <h3>Fat Burner Injection</h3>
+            <img src="/images/Athletic_IV.png" alt="" />
+                <h3>Athletic IV</h3>
                 <Button>Book Now</Button>
             </Wrap>
             <Wrap>
-                <img src="/images/Dehydration-IV-Treatment-.jpg" alt="" />
-                <h3>Fat Burner Injection</h3>
+            <img src="/images/Athletic_IV.png" alt="" />
+                <h3>Athletic IV</h3>
                 <Button>Book Now</Button>
             </Wrap>
             <Wrap>
-                <img src="/images/Dehydration-IV-Treatment-.jpg" alt="" />
-                <h3>Fat Burner Injection</h3>
+            <img src="/images/Athletic_IV.png" alt="" />
+                <h3>Athletic IV</h3>
                 <Button>Book Now</Button>
             </Wrap>
             <Wrap>
-                <img src="/images/Dehydration-IV-Treatment-.jpg" alt="" />
-                <h3>Fat Burner Injection</h3>
+            <img src="/images/Athletic_IV.png" alt="" />
+                <h3>Athletic IV</h3>
                 <Button>Book Now</Button>
             </Wrap>
+            <footer></footer>
         </Content>
     </Container>
   )
@@ -56,16 +72,19 @@ function Services() {
 export default Services
 
 const Container = styled.div`
-    
+    padding: 0 20%;
 `
 
 const Content = styled.div`
     display: grid;
-    grid-gap: 50px;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 60px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    
     `
 
 const Wrap = styled.div`
+    text-decoration: none;
+    color: black;
     border-radius: 10px;
     cursor: pointer;
     /* overflow: hidden; */
@@ -75,9 +94,9 @@ const Wrap = styled.div`
     transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
     
     img {
-        width: 50%;
+        width: 100%;
         /* height: 70%; */
-        object-fit: cover;
+        object-fit: contain;
         
     }
     
@@ -108,4 +127,8 @@ const Button = styled.div`
         border-color: transparent;
     }
 
+`
+
+const ServiceTitle = styled.div`
+    padding: 100px;
 `

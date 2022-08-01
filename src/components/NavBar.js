@@ -1,26 +1,36 @@
 import React from 'react';
 import styled from 'styled-components';
+import Popup from 'reactjs-popup';
 
 function NavBar() {
   return (
     <NavContainer>
+        <a href='/'>
+            <Logo src="/images/RHLogo1.PNG" />
+        </a>
+
         <NavMenu>
-            <a>
+            <a href='/'>
                 <img src="/images/home-icon.svg" alt="" />
                 <span>HOME</span>
             </a>
-            <a>
+            <a href='/services'>
                 <img src="/images/search-icon.svg" alt="" />
                 <span>SERVICES</span>
             </a>
-            <a>
-                <img src="/images/watchlist-icon.svg" alt="" />
-                <span>CONTACT US</span>
-            </a>
-            <a>
+            
+            <a href='/aboutme'>
                 <img src="/images/watchlist-icon.svg" alt="" />
                 <span>ABOUT US</span>
             </a>
+            <Popup trigger={<a>
+                <img src="/images/watchlist-icon.svg" alt="" />
+                <span>CONTACT US</span>
+                </a>} 
+                position="right center">
+                <h3>✆ : +1 (702) 526-3683</h3>
+            </Popup>
+            
         </NavMenu>
     </NavContainer>
   )
@@ -28,6 +38,10 @@ function NavBar() {
 
 export default NavBar
 
+const Logo = styled.img`
+    width: 60px;
+
+`
 const NavContainer = styled.nav`
     height: 70px;
     /* background: #090b13; */
@@ -43,6 +57,8 @@ const NavMenu = styled.div`
     margin-left: 25px;
     align-items: center;
     a {
+        text-decoration: none;
+        color: black;
         display: flex;
         align-items: center;
         padding: 0 12px;

@@ -2,12 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import Hero from './Hero'
 import Services from './Services'
+// import Footer from './Footer'
 
 function Home() {
   return (
     <Container>
         <Hero />
         <Services />
+        
     </Container>
   )
 }
