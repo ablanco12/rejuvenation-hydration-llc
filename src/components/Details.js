@@ -6,7 +6,7 @@ function Details() {
     <Container>
         
         <ImageTitle>
-          <img src="/images/Athletic_IV.png" alt="" />
+          <img src="/build/images/Athletic_IV.png" alt="" />
         </ImageTitle>
         <Controls>
           <DescriptionContainer>

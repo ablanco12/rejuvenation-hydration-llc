@@ -5,7 +5,7 @@ function Hero() {
   return (
     <Container>
         <Wrap>
-            <img src="/images/RHhero3.png" alt="" />
+            <img src="/build/images/RHhero3.png" alt="" />
         </Wrap>
     </Container>
   )
