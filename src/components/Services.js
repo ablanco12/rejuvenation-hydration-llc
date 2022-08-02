@@ -19,48 +19,48 @@ function Services() {
         <Content>
             <a href='/details'>
             <Wrap>
-                <img src="/build/images/Athletic_IV.png" alt="" />
+                <img src="/images/Athletic_IV.png" alt="" />
                 <h3>Athletic IV</h3>
                 <Button>Book Now</Button>
             </Wrap>
             </a>
             <Wrap>
-            <img src="/build/images/Athletic_IV.png" alt="" />
+            <img src="/images/Athletic_IV.png" alt="" />
                 <h3>Athletic IV</h3>
                 <Button>Book Now</Button>
             </Wrap>
             <Wrap>
-            <img src="/build/images/Athletic_IV.png" alt="" />
+            <img src="/images/Athletic_IV.png" alt="" />
                 <h3>Athletic IV</h3>
                 <Button>Book Now</Button>
             </Wrap>
             <Wrap>
-            <img src="/build/images/Athletic_IV.png" alt="" />
+            <img src="/images/Athletic_IV.png" alt="" />
                 <h3>Athletic IV</h3>
                 <Button>Book Now</Button>
             </Wrap>
             <Wrap>
-            <img src="/build/images/Athletic_IV.png" alt="" />
+            <img src="/images/Athletic_IV.png" alt="" />
                 <h3>Athletic IV</h3>
                 <Button>Book Now</Button>
             </Wrap>
             <Wrap>
-            <img src="/build/images/Athletic_IV.png" alt="" />
+            <img src="/images/Athletic_IV.png" alt="" />
                 <h3>Athletic IV</h3>
                 <Button>Book Now</Button>
             </Wrap>
             <Wrap>
-            <img src="/build/images/Athletic_IV.png" alt="" />
+            <img src="/images/Athletic_IV.png" alt="" />
                 <h3>Athletic IV</h3>
                 <Button>Book Now</Button>
             </Wrap>
             <Wrap>
-            <img src="/build/images/Athletic_IV.png" alt="" />
+            <img src="/images/Athletic_IV.png" alt="" />
                 <h3>Athletic IV</h3>
                 <Button>Book Now</Button>
             </Wrap>
             <Wrap>
-            <img src="/build/images/Athletic_IV.png" alt="" />
+            <img src="/images/Athletic_IV.png" alt="" />
                 <h3>Athletic IV</h3>
                 <Button>Book Now</Button>
             </Wrap>
