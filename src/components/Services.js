@@ -1,9 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import { Link } from 'react-router-dom'
+import { selectProducts } from '../features/products/productSlice'
+import { useSelector } from 'react-redux';
 
 function Services() {
-
+    const products  = useSelector(selectProducts);
   return (
     <Container>
         <ServiceTitle>
@@ -17,12 +19,19 @@ function Services() {
         </ServiceTitle>
 
         <Content>
-            <a href='/details'>
-            <Wrap>
-                <img src="/images/Athletic_IV.png" alt="" />
-                <h3>Athletic IV</h3>
-                <Button>Book Now</Button>
-            </Wrap>
+            { products && 
+                products.map((product) => (
+                    <Wrap key={product.id}>
+                        <Link to={`/details/${product.id}`}>
+                            <img src={product.cardImg} alt="" />
+                            <h3>Athletic IV</h3>
+                            <Button>Book Now</Button>
+                        </Link>
+                    </Wrap>
+                    
+                ))
+            }
+            {/* <a href='/details'>
             </a>
             <Wrap>
             <img src="/images/Athletic_IV.png" alt="" />
@@ -63,7 +72,7 @@ function Services() {
             <img src="/images/Athletic_IV.png" alt="" />
                 <h3>Athletic IV</h3>
                 <Button>Book Now</Button>
-            </Wrap>
+            </Wrap> */}
             <footer></footer>
         </Content>
     </Container>
