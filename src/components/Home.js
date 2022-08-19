@@ -2,23 +2,11 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import Hero from './Hero'
 import Services from './Services'
-import db from '../firebase'
-import { useDispatch } from 'react-redux'
-import { setProducts } from '../features/products/productSlice'
+
 // import Footer from './Footer'
 
 function Home() {
-    const dispatch = useDispatch();
-
-  useEffect(()=>{
-    db.collection("products").onSnapshot((snapshot)=>{
-        let tempProducts = snapshot.docs.map((doc)=>{
-          // console.log(doc.data());
-          return {id: doc.id, ...doc.data()}
-        })
-        dispatch(setProducts(tempProducts));
-    })
-  })
+    
 
   return (
     <Container>

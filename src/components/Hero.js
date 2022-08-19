@@ -5,7 +5,7 @@ function Hero() {
   return (
     <Container>
         <Wrap>
-            <img src="/images/RHhero3.png" alt="" />
+            <img src="/images/heroWithNewLogo1.png" alt="" />
         </Wrap>
     </Container>
   )
@@ -17,12 +17,12 @@ const Container = styled.div`
 `
 const Wrap = styled.div`
     cursor: pointer;
-    /* height: 60vh;
-    width: 30vw; */
+    /* height: 45vh; */
+    /* width: 30vw; */
+    margin-top: 5%;
     
     img {
         height: 100%;
         width: 100%;
-
     }
 `

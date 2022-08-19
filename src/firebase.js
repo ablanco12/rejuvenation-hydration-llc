@@ -1,4 +1,4 @@
-import firebase from "./firebase";
+import firebase from "firebase";
 
 
 // const firebaseConfig = {
@@ -12,14 +12,14 @@ import firebase from "./firebase";
 //   };
   
   // Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyAztnFiFe-exjOUT0-kEFXt3W6wp2O-ELs",
-  authDomain: "rejuvenation-hydration.firebaseapp.com",
-  projectId: "rejuvenation-hydration",
-  storageBucket: "rejuvenation-hydration.appspot.com",
-  messagingSenderId: "1030111668526",
-  appId: "1:1030111668526:web:378b8b9e46b830b76a32bf"
-};
+  const firebaseConfig = {
+    apiKey: "AIzaSyAztnFiFe-exjOUT0-kEFXt3W6wp2O-ELs",
+    authDomain: "rejuvenation-hydration.firebaseapp.com",
+    projectId: "rejuvenation-hydration",
+    storageBucket: "rejuvenation-hydration.appspot.com",
+    messagingSenderId: "1030111668526",
+    appId: "1:1030111668526:web:378b8b9e46b830b76a32bf"
+  };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();

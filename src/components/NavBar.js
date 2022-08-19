@@ -5,10 +5,10 @@ import Popup from 'reactjs-popup';
 function NavBar() {
   return (
     <NavContainer>
+
         <a href='/'>
             <Logo src="/images/RHLogo1.PNG" />
         </a>
-
         <NavMenu>
             <a href='/'>
                 <img src="/images/home-icon.svg" alt="" />
@@ -49,6 +49,9 @@ const NavContainer = styled.nav`
     align-items: center;
     padding: 0 36px;
     overflow-x: hidden;
+    position: fixed;
+    z-index: 100;
+    /* margin-left: 10%; */
 `
 
 const NavMenu = styled.div`
@@ -56,6 +59,7 @@ const NavMenu = styled.div`
     flex: 1;
     margin-left: 25px;
     align-items: center;
+    
     a {
         text-decoration: none;
         color: black;

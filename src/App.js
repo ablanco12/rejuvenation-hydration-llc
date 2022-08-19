@@ -24,11 +24,11 @@ function App() {
             <AboutMe />
           </Route>
             {/* <Details /> */}
-          <Route path="/services">
-            <Services />
-          </Route>
           <Route path="/details/:id">
             <Details />
+          </Route>
+          <Route path="/services">
+            <Services />
           </Route>
           <Route path="/">
             <Home />

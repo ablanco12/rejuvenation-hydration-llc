@@ -1,17 +1,41 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
+import { useParams } from 'react-router-dom';
+import db from '../firebase';
 
 function Details() {
+
+  const { id } = useParams();
+  const [ product, setProduct ]  = useState()
+
+  useEffect(() => {
+    // Grab the product info from DB
+    db.collection("products")
+    .doc(id)
+    .get()
+    .then((doc) => {
+        if(doc.exists){
+          // Save the product data
+          setProduct(doc.data());
+        } else {
+          // Redirect to home page
+        }
+    })
+  })
+
   return (
     <Container>
-        
+        { product && (
+
+
+          <>
         <ImageTitle>
-          <img src="/build/images/Athletic_IV.png" alt="" />
+          <img src={product.cardImg} alt="" />
         </ImageTitle>
         <Controls>
           <DescriptionContainer>
             <Subtitle>
-                <h1>Athletic IV</h1>
+                <h1>{product.productTitle}</h1>
                 <h2>1 hour and up · $160</h2>
                 
             </Subtitle>
@@ -25,14 +49,18 @@ function Details() {
                 <img src="/images/play-icon-white.png" alt="" />
                 <span>Book Now</span>
             </BookNowButton>
+          
           </DescriptionContainer>
-        </Controls>
+          </Controls>
+          </>
+          )
+        }
       </Container>
   )
 }
 
 
-export default Details
+export default Details;
 
 
 const Container = styled.div`
