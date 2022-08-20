@@ -63,6 +63,7 @@ export default Services;
 
 const Container = styled.div`
   padding: 0 20%;
+  background-color: aliceblue;
 `;
 
 const Content = styled.div`
@@ -116,4 +117,5 @@ const Button = styled.div`
 
 const ServiceTitle = styled.div`
   padding: 70px;
+  
 `;
