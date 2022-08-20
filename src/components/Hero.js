@@ -19,7 +19,7 @@ const Wrap = styled.div`
     cursor: pointer;
     /* height: 45vh; */
     /* width: 30vw; */
-    margin-top: 5%;
+    /* margin-top: 5%; */
     
     img {
         height: 100%;

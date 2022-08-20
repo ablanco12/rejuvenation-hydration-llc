@@ -24,7 +24,8 @@ const Container = styled.div`
     padding: 0 calc(3.5vw + 5px);
     position: relative;
     overflow-x: hidden;
-
+    width: 100%;
+    
     &:before {
         /* background: url("/images/home-background.png") center center / cover no-repeat fixed; */
         content: "";

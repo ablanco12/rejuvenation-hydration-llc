@@ -115,5 +115,5 @@ const Button = styled.div`
 `;
 
 const ServiceTitle = styled.div`
-  padding: 100px;
+  padding: 70px;
 `;
