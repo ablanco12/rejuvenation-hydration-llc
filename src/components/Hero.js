@@ -12,11 +12,13 @@ function Hero() {
 }
 
 export default Hero
+
+
 const Container = styled.div`
     /* padding-left: 60%; */
 `
 const Wrap = styled.div`
-    cursor: pointer;
+    /* cursor: pointer; */
     /* height: 45vh; */
     /* width: 30vw; */
     /* margin-top: 5%; */
