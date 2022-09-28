@@ -1,16 +1,13 @@
-import React, { useEffect } from 'react'
 import styled from 'styled-components'
-import Hero from './Hero'
+// import Hero from './Hero'
 import Services from './Services'
-
-// import Footer from './Footer'
 
 function Home() {
     
 
   return (
     <Container>
-        <Hero />
+        {/* <Hero /> */}
         <Services />
     </Container>
   )
@@ -20,7 +17,7 @@ function Home() {
 export default Home
 
 const Container = styled.div`
-    min-height: calc(100vh - 70px);
+    min-height: calc(90vh - 70px);
     /* padding: 0 calc(3.5vw + 5px); */
     position: relative;
     overflow-x: hidden;

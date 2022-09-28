@@ -7,6 +7,7 @@ import db from "../firebase";
 import { useDispatch } from "react-redux";
 import { setProducts } from "../features/product/productSlice";
 
+
 function Services() {
   const products = useSelector(selectProducts);
   const dispatch = useDispatch();
@@ -20,50 +21,87 @@ function Services() {
     });
   });
   return (
-    <Container>
-      <ServiceTitle>
-        <h1>Mobile IV & Injection Services</h1>
-        <h3>
-          Rejuvenation Hydration offers a variety of at-home services, please
-          see below:
-        </h3>
-      </ServiceTitle>
-      <ServiceTitle>
-        <h1>IV Therapy</h1>
-        <h3 style={{ color: "gray" }}>
-          Experience all the benefits of IV Therapy in the comfort of your own
-          home.
-        </h3>
-        <h3 style={{ color: "#62c4ea" }}>
-          Select from one of the following options:
-        </h3>
-      </ServiceTitle>
+      <Container>
+          <ServiceTitle>
+              <h1>Mobile IV & Injection Services</h1>
+              <h3 style={{color: 'gray'}}>
+                  Expand your limits... <br />
+                  <br />
+                  You want to keep going, but you’re running on fumes Drinking a
+                  gallon of water a day, but still feeling dehydrated <br />
+                  <br />
+                  Overwhelmed with trying different fat burners, from powders to
+                  pills and tired of having different reactions to them.
+                  <br />
+                  <br />
+                  Is simplicity too much to ask for??
+                  <br />
+                  <br />
+                  You’re wanting to Optimize your body,right?
+                  <br />
+                  <br />
+                  Lucky for you! There is a solution...
+                  <br />
+                  <br />
+                  Stop waiting to have more energy, feel hydrated and testing
+                  out random supplements in your body.
+                  <br />
+                  <br />
+                  Schedule your appointment & start receiving the nutrients your
+                  body needs with IV Hydration & Vitamin Therapy
+              </h3>
 
-      <Content>
-        {products &&
-          products.map((product) => (
-            <Wrap key={product.id}>
-              <Link
-                to={`/details/${product.id}`}
-                style={{ textDecoration: "none", color: "black" }}
-              >
-                <img src={product.cardImg} alt="" />
-                <h3>{product.productTitle}</h3>
-                <Button>Book Now</Button>
-              </Link>
-            </Wrap>
-          ))}
-      </Content>
-      <footer>_________________________</footer>
-    </Container>
+              <h3 style={{color: '#62c4ea'}}>
+                  Rejuvenation Hydration offers a variety of at-home services,
+                  please see below:
+              </h3>
+          </ServiceTitle>
+          <ServiceTitle>
+              <h1>IV Therapy</h1>
+              <h3 style={{color: 'gray'}}>
+                  Going out? Good, enjoy it! We’ve go your back. We will have
+                  you back to normal in no time. You don’t even have to leave
+                  your house, we come to you!
+              </h3>
+              <h3 style={{color: 'gray'}}>
+                  IV therapy goes beyond just hangover recovery. All around
+                  health, energy and wellness benefits! We bring hydration to
+                  you! 💧
+              </h3>
+              <h3 style={{color: 'gray'}}>
+                  Experience all the benefits of IV Therapy in the comfort of
+                  your own home.
+              </h3>
+              <h3 style={{color: '#62c4ea'}}>
+                  Select from one of the following options:
+              </h3>
+          </ServiceTitle>
+
+          <Content>
+              {products &&
+                  products.map((product) => (
+                      <Wrap key={product.id}>
+                          <Link
+                              to={`/details/${product.id}`}
+                              style={{textDecoration: 'none', color: 'black'}}>
+                              <img src={product.cardImg} alt='' />
+                              <h3>{product.productTitle}</h3>
+                              <Button>Book Now</Button>
+                          </Link>
+                      </Wrap>
+                  ))}
+          </Content>
+          <footer style={{color: 'gray'}}>_________________________</footer>
+      </Container>
   );
 }
 
 export default Services;
 
 const Container = styled.div`
-  padding: 0 20%;
-  background-color: aliceblue;
+    min-height: calc(90vh - 70px);
+    padding: 0 20%;
+    background-color: aliceblue;
 `;
 
 const Content = styled.div`

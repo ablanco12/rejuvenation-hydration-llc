@@ -4,26 +4,26 @@ import Home from './components/Home'
 import AboutMe from './components/AboutMe';
 import Services from './components/Services';
 import Details from './components/Details';
+import Hero from './components/Hero';
+import Footer from './components/Footer';
 
-
-import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
-import Footer from './components/Footer';
+
 
 function App() {
   return (
-    <div className="App">
+    <div style={{textAlign: 'center'}}>
       <Router>
         <NavBar />
+        <Hero />
         <Switch>
           <Route path="/aboutme">
             <AboutMe />
           </Route>
-            {/* <Details /> */}
           <Route path="/details/:id">
             <Details />
           </Route>

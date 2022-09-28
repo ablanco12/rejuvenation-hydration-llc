@@ -22,13 +22,13 @@ function NavBar() {
 
           <a href="/aboutme">
             <img src="/images/watchlist-icon.svg" alt="" />
-            <span>ABOUT US</span>
+            <span>ABOUT ME</span>
           </a>
           <Popup
             trigger={
               <a>
                 <img src="/images/watchlist-icon.svg" alt="" />
-                <span>CONTACT US</span>
+                <span>CONTACT ME</span>
               </a>
             }
             position="right center"
@@ -47,7 +47,7 @@ const Logo = styled.img`
   width: 60px;
 `;
 const NavContainer = styled.nav`
-  height: 70px;
+  /* height: 70px; */
   /* background: #090b13; */
   display: flex;
   align-items: center;
