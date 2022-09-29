@@ -1,13 +1,13 @@
 import styled from 'styled-components'
-// import Hero from './Hero'
 import Services from './Services'
+import Header from './Header'
 
 function Home() {
     
 
   return (
     <Container>
-        {/* <Hero /> */}
+      <Header />
         <Services />
     </Container>
   )

@@ -1,35 +1,36 @@
 import React from "react";
 import styled from "styled-components";
 import Popup from "reactjs-popup";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
     <div>
       <Banner></Banner>
       <NavContainer>
-        <a href="/">
+        <Link to="/">
           <Logo src="/images/RHLogo1.PNG" />
-        </a>
+        </Link>
         <NavMenu>
-          <a href="/">
+          <Link to="/">
             <img src="/images/home-icon.svg" alt="" />
             <span>HOME</span>
-          </a>
-          <a href="/services">
+          </Link>
+          <Link to="/services">
             <img src="/images/search-icon.svg" alt="" />
             <span>SERVICES</span>
-          </a>
+          </Link>
 
-          <a href="/aboutme">
+          <Link to="/aboutme">
             <img src="/images/watchlist-icon.svg" alt="" />
             <span>ABOUT ME</span>
-          </a>
+          </Link>
           <Popup
             trigger={
-              <a>
+              <Link>
                 <img src="/images/watchlist-icon.svg" alt="" />
                 <span>CONTACT ME</span>
-              </a>
+              </Link>
             }
             position="right center"
           >

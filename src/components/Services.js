@@ -6,7 +6,8 @@ import { useSelector } from "react-redux";
 import db from "../firebase";
 import { useDispatch } from "react-redux";
 import { setProducts } from "../features/product/productSlice";
-
+import IVtitle from "./IVtitle";
+import InjectionTitle from "./InjectionTitle";
 
 function Services() {
   const products = useSelector(selectProducts);
@@ -22,41 +23,8 @@ function Services() {
   });
   return (
       <Container>
-          <ServiceTitle>
-              <h1>Mobile IV & Injection Services</h1>
-              <h3 style={{color: 'gray'}}>
-                  Expand your limits... <br />
-                  <br />
-                  You want to keep going, but you’re running on fumes Drinking a
-                  gallon of water a day, but still feeling dehydrated <br />
-                  <br />
-                  Overwhelmed with trying different fat burners, from powders to
-                  pills and tired of having different reactions to them.
-                  <br />
-                  <br />
-                  Is simplicity too much to ask for??
-                  <br />
-                  <br />
-                  You’re wanting to Optimize your body,right?
-                  <br />
-                  <br />
-                  Lucky for you! There is a solution...
-                  <br />
-                  <br />
-                  Stop waiting to have more energy, feel hydrated and testing
-                  out random supplements in your body.
-                  <br />
-                  <br />
-                  Schedule your appointment & start receiving the nutrients your
-                  body needs with IV Hydration & Vitamin Therapy
-              </h3>
-
-              <h3 style={{color: '#62c4ea'}}>
-                  Rejuvenation Hydration offers a variety of at-home services,
-                  please see below:
-              </h3>
-          </ServiceTitle>
-          <ServiceTitle>
+          <IVtitle />
+          {/* <ServiceTitle>
               <h1>IV Therapy</h1>
               <h3 style={{color: 'gray'}}>
                   Going out? Good, enjoy it! We’ve go your back. We will have
@@ -75,7 +43,7 @@ function Services() {
               <h3 style={{color: '#62c4ea'}}>
                   Select from one of the following options:
               </h3>
-          </ServiceTitle>
+          </ServiceTitle> */}
 
           <Content>
               {products &&
@@ -91,7 +59,22 @@ function Services() {
                       </Wrap>
                   ))}
           </Content>
-          <footer style={{color: 'gray'}}>_________________________</footer>
+          <InjectionTitle />
+          <Content>
+              {products &&
+                  products.map((product) => (
+                      <Wrap key={product.id}>
+                          <Link
+                              to={`/details/${product.id}`}
+                              style={{textDecoration: 'none', color: 'black'}}>
+                              <img src={product.cardImg} alt='' />
+                              <h3>{product.productTitle}</h3>
+                              <Button>Book Now</Button>
+                          </Link>
+                      </Wrap>
+                  ))}
+          </Content>
+          {/* <footer style={{color: 'gray'}}>_________________________</footer> */}
       </Container>
   );
 }
@@ -105,6 +88,7 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
+padding-bottom: 70px;
   display: grid;
   grid-gap: 60px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -153,7 +137,7 @@ const Button = styled.div`
   }
 `;
 
-const ServiceTitle = styled.div`
-  padding: 70px;
+// const ServiceTitle = styled.div`
+//   padding: 70px;
   
-`;
+// `;
