@@ -18,5 +18,6 @@ export default Footer;
 const FooterStyle = styled.div`
     bottom: 30px;
     width: 100%;
+    padding-top: 70px;
 `;
 
